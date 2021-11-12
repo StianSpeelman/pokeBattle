@@ -1,4 +1,4 @@
-namescape Pokebattle
+namespace pokeBattle
 {
     public class Resistance
     {

@@ -45,12 +45,12 @@ namespace pokeBattle
             }
         }
 
-        public List<Attack> GetAttacks()
+        public List<Attack> retAttacks()
         {
             return Attacks;
         }
 
-        public static int GetLivingPokemon()
+        public static int retrieveLivingPKMN()
         {
             return livingPokemon;
         }
@@ -58,7 +58,7 @@ namespace pokeBattle
 
     public class Giratina : Pokemon
     {
-        public Giratina():base("Giratina", )
+        public Giratina():base("Giratina", 504, new Energytype("dragon", "grass", "ice"), new Resistance("dragon", "grass", "ice").TypeResist, 20), new Weakness(new Energytype("dragon", "grass", "ice").TypeWeak, 1.5F))
         {
             Attacks.Add(new Attack("Shadow Force", 120));
             Attacks.Add(new Attack("Giga Impact", 150));
@@ -67,7 +67,7 @@ namespace pokeBattle
 
     public class Arceus : Pokemon
     {
-        public Arceus():base("Arceus", )
+        public Arceus():base("Arceus", 444, new Energytype("ice", "ghost", "steel"), new Resistance("ice", "ghost", "steel").TypeResist, 20), new Weakness(new Energytype("ice", "ghost", "steel").TypeWeak, 2.0F))
         {
             Attacks.Add(new Attack("Judgment", 100));
             Attacks.Add(new Attack("Hyper Beam", 150));
