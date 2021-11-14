@@ -25,6 +25,14 @@ namespace pokeBattle
 
             hostilePokemon.Damage(pokemon, 1);
             pokemon.Damage(hostilePokemon, 0);
+
+            Console.WriteLine($"{pokemon.retrieveLivingPKMN()}");
+            Console.WriteLine($"Giratina used {pokemon.retAttacks()[0].Name} on {hostilePokemon.Name}, {hostilePokemon.Name}'s health has been lowered to {hostilePokemon.Health}");
+            Console.WriteLine($"Arceus used {hostilePokemon.retAttacks()[1].Name} on {pokemon.Name}, {pokemon.Name}'s health has been lowered to {pokemon.Health}");
+            Console.WriteLine("currently living Pokemon are:");
+            Console.WriteLine($"{pokemon.retrieveLivingPKMN}");
+
+            Console.ReadKey();
         }
     }
 }
